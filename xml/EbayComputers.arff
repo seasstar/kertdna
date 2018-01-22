@@ -1,0 +1,14 @@
+@relation 'computers'
+
+@attribute title string 
+@attribute price real
+@attribute processorType {amd,'intel celeron','intel core 2','intel core i3','intel core i5','intel core i7'}
+@attribute processorSpeed {3,2.5,2,1.5,1}
+@attribute brand {acer,antec,compag,dell,hewlett-packard,lenove,tower,shuttle,ibm,div,others}
+@attribute memory real
+@attribute hardDriveCapacity real
+@attribute BundledItems string
+
+
+ @data 
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="KertDNA" transaction-type="RESOURCE_LOCAL">
+		<class>kert.entity.Creation</class>
+		<class>kert.entity.Experience</class>
+		<class>kert.entity.Subject</class>
+		<class>kert.entity.Variable</class>
+		<class>kert.entity.VariableCategory</class>
+		<class>kert.entity.Function</class>
+		<class>kert.entity.FunctionValue</class>
+		<class>kert.entity.Subfactor</class>
+		<class>kert.entity.Factor</class>
+		<class>kert.entity.Term</class>
+		<class>kert.entity.Constraint</class>
+		<class>kert.entity.Rule</class>
+		<class>kert.entity.Joint</class>
+		<class>kert.entity.Consequence</class>
+		<class>kert.entity.Condition</class>
+		<properties> <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" 
+				/> <property name="javax.persistence.jdbc.url" value="jdbc:derby:/localhost/testDb;create=true" 
+				/> <property name="javax.persistence.jdbc.user" value="app" /> <property 
+				name="javax.persistence.jdbc.password" value="app" />
+			<!--<property name="javax.persistence.jdbc.driver"
+				value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://kert-pc:1433;databaseName=test;integratedSecurity=true" />
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			<property name="javax.persistence.jdbc.password" value="password" /> -->
+			<!-- EclipseLink should create the database schema automatically -->
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+			<property name="eclipselink.ddl-generation.output-mode"
+				value="database" />
+		</properties>
+	</persistence-unit>
+</persistence>
